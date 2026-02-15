@@ -1,0 +1,56 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "sisyphus",
+  "instructions": [
+    "AGENTS.md",
+    "ARCHITECTURE.md",
+    "CONTRACTS.md",
+    "SPEC.md",
+    "SCOPE_MAP.md",
+    "DECISIONS.md",
+    "PARALLEL.md",
+    "HANDOFF_TEMPLATE.md",
+    "agents/*.md"
+  ],
+  "permission": {
+    "doom_loop": "allow",
+    "external_directory": "ask",
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    }
+  },
+  "agent": {
+    "sisyphus": {
+      "description": "Primary Codex-style execution loop for this repository.",
+      "mode": "primary",
+      "temperature": 0.1,
+      "steps": 50,
+      "prompt": "You are the Sisyphus execution agent for this repository. Follow AGENTS.md and SSOT files strictly. Use iterative cycles PLAN -> IMPLEMENT -> VALIDATE, and on failure run DIAGNOSE -> FIX -> RE-VALIDATE until stable or escalation is required. Prefer direct execution over long planning. Keep changes minimal and in-scope.",
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true
+      },
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "webfetch": "allow",
+        "doom_loop": "allow"
+      }
+    },
+    "plan": {
+      "description": "Planning-only subagent for decomposition, risk checks, and validation strategy.",
+      "mode": "subagent",
+      "temperature": 0.2,
+      "prompt": "Create concise, actionable plans aligned with AGENTS.md and SSOT. Surface risks, assumptions, and validation steps. Do not execute implementation actions.",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "webfetch": "ask"
+      }
+    }
+  }
+}
