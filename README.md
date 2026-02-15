@@ -18,13 +18,15 @@ Manager:
 
 Tech Lead:
 - owns technical judgment for architecture consistency
-- enforces Clean Code and security standards
-- adjudicates complex trade-offs before implementation
+- enforces Clean Code, security, and maintainability standards
+- reviews implementation direction before cross-cutting changes
+- updates `DECISIONS.md` when trade-offs are resolved
 
 Workers:
 - operate within assigned scope
 - follow SSOT files
 - submit handoffs
+- receive Technical Lead approvals for design-sensitive work
 
 SSOT always overrides implementation.
 
@@ -36,7 +38,7 @@ These files define authoritative system behavior:
 
 | File | Purpose |
 |-----|--------|
-| CONTEXT.md | long-term project memory |
+| CONTEXT.md | long-term project memory and decision history |
 | ARCHITECTURE.md | system structure and dependency rules |
 | CONTRACTS.md | data and interface contracts |
 | SPEC.md | feature requirements |
@@ -47,7 +49,7 @@ Do not implement behavior that conflicts with SSOT.
 
 ---
 
-# Orchestration Files
+# Operational Authorities
 
 | File | Purpose |
 |-----|--------|
@@ -57,6 +59,12 @@ Do not implement behavior that conflicts with SSOT.
 | HANDOFF_TEMPLATE.md | Worker → Manager handoff format |
 | agents/ | role-specific agent instructions |
 | agents/tech_lead.md | technical governance and quality review |
+
+Operational order is:
+
+- Shared rules and roles are authoritative for work practices.
+- SSOT files are authoritative for behavior and architecture.
+- `agents/tech_lead.md` is authoritative for quality/security trade-off decisions.
 
 ---
 
@@ -70,7 +78,20 @@ Typical flow:
 4. Assign ownership via SCOPE_MAP.md
 5. Implement within scope
 6. Submit handoff
-7. Manager integrates changes
+7. Tech Lead performs technical acceptance if requested
+8. Manager integrates changes
+
+---
+
+# Recommended Collaboration Pattern
+
+For design-sensitive or cross-cutting changes, follow this pattern:
+
+1. Manager defines the objective.
+2. Tech Lead validates approach, risk, and long-term fit.
+3. Worker executes within scope.
+4. Tech Lead signs off on technical quality.
+5. Manager performs final integration.
 
 ---
 

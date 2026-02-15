@@ -37,8 +37,10 @@ Shared files include:
 - DECISIONS.md
 - SCOPE_MAP.md
 - AGENTS.md
+- CONTEXT.md
 - PARALLEL.md
 - HANDOFF_TEMPLATE.md
+- agents/tech_lead.md
 
 Also includes:
 
@@ -46,6 +48,10 @@ Also includes:
 - dependency lock files
 
 Workers MUST NOT modify shared files without Manager approval.
+
+For architecture/security-sensitive work:
+
+- Tech Lead approval is required before editing shared files or cross-cutting scoped files.
 
 ---
 
@@ -89,6 +95,8 @@ Manager integrates changes in this order:
 6. QA
 
 This order prevents dependency conflicts.
+
+For cross-cutting technical changes, Manager and Tech Lead align final integration order before handoff.
 
 ---
 

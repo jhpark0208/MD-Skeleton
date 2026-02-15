@@ -37,6 +37,12 @@ Why change was needed:
 
 # 3) SSOT Compliance
 
+Tech Lead gate:
+
+- reviewed by Tech Lead: <yes / no / not required>
+- gate status: <approved / rejected / pending>
+- notes: <notes>
+
 ARCHITECTURE.md compliance:
 
 - yes / no

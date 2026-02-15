@@ -1,5 +1,4 @@
-# AGENTS.md
-Codex Orchestration Entry Point
+# Codex Orchestration Entry Point
 
 This file defines the orchestration model, agent roles, and execution rules.
 
@@ -34,33 +33,59 @@ This file ensures:
 - consistent orchestration
 - safe parallel execution
 - predictable integration
-- self-healing capability
+- clear technical quality gates
 
 ---
 
 # 1) Orchestration Model
 
-This system uses a Manager–Worker model.
+This system uses a Manager–Tech Lead–Worker model.
 
 Manager responsibilities:
 
-- interpret tasks
-- update SSOT files when necessary
-- split work into scopes
-- assign ownership
-- integrate results
+- interpret tasks and split work into scopes
+- assign ownership using `SCOPE_MAP.md`
+- coordinate handoff and integration
+
+Tech Lead responsibilities:
+
+- enforce architecture consistency and security posture
+- gate quality decisions for design-sensitive changes
+- preserve long-term maintainability and technical coherence
 
 Worker responsibilities:
 
 - operate only within assigned scope
-- follow SSOT files
+- follow SSOT and shared rules
 - produce handoff upon completion
 
 Workers MUST NOT operate outside assigned scope.
 
 ---
 
-# 2) Single Source of Truth Authority
+# 2) Decision Authority
+
+Authority ladder:
+
+1. SSOT files:
+   - ARCHITECTURE.md
+   - CONTRACTS.md
+   - SPEC.md
+   - SCOPE_MAP.md
+   - DECISIONS.md
+2. Technical judgment by Tech Lead
+3. Manager decision within workflow and scope
+
+If SSOT has no direct guidance and a technical risk remains:
+
+- Worker MUST escalate to Manager
+- Manager MUST route to Tech Lead before proceeding
+
+SSOT wins all direct conflicts.
+
+---
+
+# 3) Single Source of Truth Authority
 
 SSOT files have absolute authority:
 
@@ -76,11 +101,11 @@ SSOT wins.
 
 Worker MUST NOT override SSOT.
 
-Worker MUST request Manager update SSOT first.
+Worker MUST request Manager or Tech Lead update SSOT first.
 
 ---
 
-# 3) Parallel Execution Model
+# 4) Parallel Execution Model
 
 Parallel execution is enabled via scope ownership.
 
@@ -92,9 +117,13 @@ Workers may operate in parallel ONLY if:
 
 Manager coordinates parallel execution.
 
+For architecture/security-sensitive areas:
+
+- Tech Lead review is required before implementation starts.
+
 ---
 
-# 4) Self-Healing Loop (MANDATORY)
+# 5) Self-Healing Loop (MANDATORY)
 
 Workers MUST use iterative correction:
 
@@ -114,11 +143,11 @@ If failure caused by SSOT conflict:
 
 STOP
 
-Request Manager update SSOT.
+Request Manager and/or Tech Lead update SSOT.
 
 ---
 
-# 5) Change Authority Rules
+# 6) Change Authority Rules
 
 Workers MAY modify:
 
@@ -126,15 +155,16 @@ Workers MAY modify:
 
 Workers MUST NOT modify:
 
-- shared files
+- shared files without explicit approval
 - SSOT files
 - out-of-scope files
 
 Manager owns shared files by default.
+Tech Lead may request additional checkpoints on changes affecting architecture, security, or maintainability.
 
 ---
 
-# 6) Integration Model
+# 7) Integration Model
 
 Workers MUST produce handoff using HANDOFF_TEMPLATE.md.
 
@@ -148,22 +178,21 @@ Manager integrates handoffs in priority order:
 6. QA
 
 Manager resolves conflicts.
+Tech Lead signs off on technical-quality-sensitive integrations.
 
 ---
 
-# 7) Compliance Checklist
+# 8) Compliance Checklist
 
 Before implementing, Codex MUST verify:
 
 - SSOT alignment
 - scope ownership
-- architectural compliance
-- contract compliance
+- architectural consistency
+- security and maintainability implications
 
 If unclear:
 
 STOP
 
-Request Manager clarification.
-
-Do NOT speculate.
+Request Manager and Tech Lead clarification.
