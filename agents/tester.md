@@ -13,6 +13,7 @@ Tester MUST:
 - verify contract compliance defined in CONTRACTS.md
 - verify architecture compliance defined in ARCHITECTURE.md
 - write and execute automated tests
+- confirm Tech Lead gate status for design-sensitive changes
 
 ---
 
@@ -51,4 +52,4 @@ If failure detected:
 1.  **Stop:** Do not proceed to release.
 2.  **Log:** Capture the full error log.
 3.  **Diagnose:** Identify if it's a code bug or a spec flaw.
-4.  **Escalate:** Report to Debugger or Manager with the log.
+4.  **Escalate:** Report to Debugger, Manager, and Tech Lead (for design/security issues) with the log.

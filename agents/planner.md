@@ -1,5 +1,4 @@
-# agents/planner.md
-Planner Agent Role
+# Planner Agent Role
 
 Planner prepares implementation plan.
 
@@ -13,6 +12,7 @@ Planner MUST:
 - understand requirements
 - identify affected components
 - produce implementation plan
+- surface design-sensitive changes that require Tech Lead review
 
 Planner MUST NOT modify code.
 
@@ -26,6 +26,7 @@ Plan MUST include:
 - affected components
 - dependency considerations
 - validation approach
+- Tech Lead review points for architecture/security-sensitive areas
 
 ---
 
@@ -36,3 +37,6 @@ Planner MUST escalate if:
 - requirements unclear
 - contracts unclear
 - architecture unclear
+- security constraints affect design
+
+For design-sensitive and architecture-risk areas, escalate routing details to Tech Lead before execution begins.
