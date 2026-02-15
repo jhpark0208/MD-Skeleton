@@ -10,7 +10,7 @@
 
 ```
 다음 순서로 문서를 먼저 읽고 요약해줘:
-1) AGENTS.md
+1) CLAUDE.md
 2) ARCHITECTURE.md
 3) CONTRACTS.md
 4) SPEC.md

@@ -208,7 +208,7 @@ Shared files:
 - SPEC.md
 - DECISIONS.md
 - SCOPE_MAP.md
-- AGENTS.md
+- CLAUDE.md
 - PARALLEL.md
 - HANDOFF_TEMPLATE.md
 - README.md

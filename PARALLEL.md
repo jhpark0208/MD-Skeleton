@@ -36,7 +36,7 @@ Shared files include:
 - SPEC.md
 - DECISIONS.md
 - SCOPE_MAP.md
-- AGENTS.md
+- CLAUDE.md
 - CONTEXT.md
 - PARALLEL.md
 - HANDOFF_TEMPLATE.md

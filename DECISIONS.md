@@ -191,7 +191,7 @@ Neutral:
 
 Affected components:
 
-- AGENTS.md
+- CLAUDE.md
 - PARALLEL.md
 - README.md
 - HANDOFF_TEMPLATE.md

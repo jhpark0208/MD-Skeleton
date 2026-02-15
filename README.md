@@ -53,7 +53,7 @@ Do not implement behavior that conflicts with SSOT.
 
 | File | Purpose |
 |-----|--------|
-| AGENTS.md | orchestration entry point |
+| CLAUDE.md | orchestration entry point |
 | CONTEXT.md | long-term context memory |
 | PARALLEL.md | parallel execution rules |
 | HANDOFF_TEMPLATE.md | Worker → Manager handoff format |
