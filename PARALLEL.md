@@ -41,6 +41,8 @@ Shared files include:
 - PARALLEL.md
 - HANDOFF_TEMPLATE.md
 - agents/tech_lead.md
+- agents/manager.md
+- agents/00-shared.md
 
 Also includes:
 
@@ -48,6 +50,7 @@ Also includes:
 - dependency lock files
 
 Workers MUST NOT modify shared files without Manager approval.
+For architecture/security-sensitive shared files, Tech Lead approval is required as well.
 
 For architecture/security-sensitive work:
 
@@ -140,5 +143,6 @@ Worker MUST escalate to Manager if:
 - contract unclear
 - architecture unclear
 - repeated failures occur
+- security/design risk is unresolved
 
 Worker MUST NOT proceed blindly.

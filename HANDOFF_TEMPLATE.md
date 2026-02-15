@@ -114,6 +114,11 @@ Examples:
 - architecture clarification needed
 - ownership clarification needed
 
+If Tech Lead action required:
+
+- approval gate pending
+- additional architecture/security review requested
+
 ---
 
 # 7) Additional Notes
@@ -130,4 +135,5 @@ Worker declares:
 
 - work performed within owned scope
 - SSOT files respected
+- technology/scope/contract impact is captured in relevant sections
 - handoff ready for integration

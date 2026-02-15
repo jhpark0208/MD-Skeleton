@@ -23,7 +23,7 @@ SSOT wins.
 
 Agent MUST NOT override SSOT.
 
-Agent MUST escalate to Manager.
+Agent MUST escalate to Manager, and to Tech Lead when architecture/security/quality risk remains.
 
 ---
 
@@ -38,6 +38,7 @@ Agent MUST NOT:
 
 - modify shared files
 - modify out-of-scope files
+- modify architecture without Tech Lead approval for design-sensitive cross-scope work
 
 ---
 
@@ -77,5 +78,6 @@ Agent MUST escalate if:
 - architecture unclear
 - contract unclear
 - repeated failures occur
+- security/design risk remains unresolved
 
 Agent MUST NOT guess.

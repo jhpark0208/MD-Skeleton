@@ -78,7 +78,7 @@ Typical flow:
 4. Assign ownership via SCOPE_MAP.md
 5. Implement within scope
 6. Submit handoff
-7. Tech Lead performs technical acceptance if requested
+7. Tech Lead performs technical acceptance if required
 8. Manager integrates changes
 
 ---
@@ -103,7 +103,7 @@ Workers MUST:
 - follow SSOT
 - avoid modifying shared files
 
-If unclear, escalate to Manager.
+If unclear, escalate to Manager, and to Tech Lead for architecture/security/design risks.
 
 ---
 

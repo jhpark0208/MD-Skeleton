@@ -73,13 +73,14 @@ Authority ladder:
    - SPEC.md
    - SCOPE_MAP.md
    - DECISIONS.md
-2. Technical judgment by Tech Lead
-3. Manager decision within workflow and scope
+2. Tech Lead technical judgment
+3. Manager execution decision
 
-If SSOT has no direct guidance and a technical risk remains:
+If SSOT has no direct guidance and technical risk remains:
 
 - Worker MUST escalate to Manager
 - Manager MUST route to Tech Lead before proceeding
+- For architecture/security/design-risk changes, Tech Lead MUST gate before implementation starts
 
 SSOT wins all direct conflicts.
 
@@ -101,7 +102,8 @@ SSOT wins.
 
 Worker MUST NOT override SSOT.
 
-Worker MUST request Manager or Tech Lead update SSOT first.
+Worker MUST request Manager update SSOT first.
+For technical risk, Worker MUST also include Tech Lead before proceeding.
 
 ---
 
@@ -113,7 +115,7 @@ Workers may operate in parallel ONLY if:
 
 - ownership does not overlap
 - SCOPE_MAP.md allows modification
-- shared files are not modified without lock
+- shared files are not modified without approval
 
 Manager coordinates parallel execution.
 
@@ -160,7 +162,13 @@ Workers MUST NOT modify:
 - out-of-scope files
 
 Manager owns shared files by default.
-Tech Lead may request additional checkpoints on changes affecting architecture, security, or maintainability.
+Tech Lead may request additional checkpoints on architecture/security/maintainability-sensitive changes.
+
+Shared-files requiring Tech Lead review:
+
+- architectural edits
+- security-sensitive edits
+- design-sensitive cross-cutting edits
 
 ---
 
@@ -178,7 +186,7 @@ Manager integrates handoffs in priority order:
 6. QA
 
 Manager resolves conflicts.
-Tech Lead signs off on technical-quality-sensitive integrations.
+Tech Lead signs off technical-quality-sensitive integrations.
 
 ---
 
