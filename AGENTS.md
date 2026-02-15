@@ -4,6 +4,34 @@ This file defines the orchestration model, agent roles, and execution rules.
 
 Codex MUST read this file first before performing any task.
 
+---
+
+# 0) Quick Governance Snapshot
+
+Decision flow (minimal):
+
+```text
+Task arrives
+  -> Manager defines scope/ownership (SCOPE_MAP.md)
+     -> Is it architecture/security/design-sensitive?
+        -> yes: Manager requests Tech Lead gate
+        -> no: proceed
+  -> Worker executes within scope
+  -> Worker submits handoff (HANDOFF_TEMPLATE.md)
+  -> Manager + Tech Lead align integration
+  -> Integrate in priority order
+  -> Record Tech Lead/architecture decisions in DECISIONS.md
+```
+
+Escalation path:
+
+```text
+Unclear SSOT / scope / architecture / security risk
+  -> escalate to Manager
+  -> Manager routes technical risk to Tech Lead
+  -> proceed only after gate/approval update
+```
+
 Then Codex MUST read, in order:
 
 1. ARCHITECTURE.md
