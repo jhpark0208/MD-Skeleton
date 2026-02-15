@@ -33,16 +33,16 @@ Replace placeholders once feature/system requirements are defined.
 # 1) Feature Overview
 
 Feature name:
-- <FEATURE_NAME>
+- Claude Code Adaptation for MD-Skeleton
 
 Description:
-- <FEATURE_DESCRIPTION>
+- migrate orchestration documentation to Claude Code terminology and provide executable SSOT defaults
 
 Primary goal:
-- <GOAL_DESCRIPTION>
+- enable teams to start scoped AI-assisted development immediately without unresolved template placeholders
 
 Non-goals:
-- <NON_GOAL_DESCRIPTION>
+- building application runtime features beyond documentation and orchestration definitions
 
 ---
 
@@ -52,17 +52,17 @@ Define who interacts with the system.
 
 Example placeholders:
 
-Actor: <ACTOR_NAME>
+Actor: Manager
 
 Description:
-- <DESCRIPTION>
+- orchestrates scope assignment, escalation routing, and integration sequencing
 
 Capabilities:
-- <CAPABILITY_1>
-- <CAPABILITY_2>
+- assign ownership using SCOPE_MAP.md
+- approve or reject shared-file updates with Tech Lead alignment when required
 
 Constraints:
-- <CONSTRAINT_1>
+- must enforce SSOT priority and stop work on unresolved architecture or contract ambiguity
 
 Add more actors if needed.
 
@@ -72,26 +72,26 @@ Add more actors if needed.
 
 Describe requirements from the user's perspective to ensure value delivery.
 
-Format: "As a <ROLE>, I want <FEATURE>, so that <BENEFIT>."
+Format: "As a ROLE, I want FEATURE, so that BENEFIT."
 
-## Story: <STORY_NAME>
+## Story: Baseline Orchestration Initialization
 
 **User Story:**
-> As a **<ROLE>**
-> I want to **<ACTION / FEATURE>**
-> So that **<VALUE / BENEFIT>**
+> As a **project maintainer**
+> I want to **initialize SSOT and agent-role documents for Claude Code**
+> So that **contributors can execute tasks safely with clear ownership and gates**
 
 **Acceptance Criteria (Gherkin syntax preferred):**
 
-Scenario 1: <SCENARIO_NAME>
-- Given <PRECONDITION>
-- When <ACTION>
-- Then <EXPECTED_RESULT>
+Scenario 1: SSOT baseline is concrete
+- Given the repository starts from template placeholders
+- When initialization is completed
+- Then ARCHITECTURE, CONTRACTS, SPEC, SCOPE_MAP, DECISIONS, and CONTEXT contain actionable defaults
 
-Scenario 2: <SCENARIO_NAME>
-- Given <PRECONDITION>
-- When <ACTION>
-- Then <EXPECTED_RESULT>
+Scenario 2: Governance rules are executable
+- Given a worker starts an implementation task
+- When the worker reads AGENTS and scope guidance
+- Then the worker can identify escalation gates and handoff requirements without ambiguity
 
 ---
 
@@ -104,29 +104,29 @@ Define required system behavior.
 ## Requirement: FR-1
 
 Description:
-- <REQUIREMENT_DESCRIPTION>
+- repository documentation must use Claude Code terminology where agent runtime naming is explicit
 
 Priority:
-- <HIGH / MEDIUM / LOW>
+- HIGH
 
 Source:
-- <ACTOR / SYSTEM / BUSINESS>
+- SYSTEM
 
 Acceptance criteria:
 
-- <CRITERION_1>
-- <CRITERION_2>
+- AGENTS.md and onboarding prompts reference Claude Code instead of Codex where runtime-specific wording appears
+- README.md accurately describes the repository as Claude Code-oriented
 
 ---
 
 ## Requirement: FR-2
 
 Description:
-- <REQUIREMENT_DESCRIPTION>
+- SSOT placeholders must be replaced with concrete baseline values suitable for immediate project kickoff
 
 Acceptance criteria:
 
-- <CRITERION>
+- no unresolved angle-bracket placeholders remain in core SSOT files targeted by initialization
 
 ---
 
@@ -144,8 +144,8 @@ Define expected system behavior.
 
 System MUST:
 
-- <SUCCESS_BEHAVIOR_1>
-- <SUCCESS_BEHAVIOR_2>
+- provide unambiguous ownership and escalation rules before implementation
+- preserve consistency across architecture, contracts, scope map, and decisions
 
 ---
 
@@ -169,9 +169,9 @@ Define expected states.
 
 States:
 
-- <STATE_1>
-- <STATE_2>
-- <STATE_3>
+- planning
+- execution_ready
+- active_execution
 
 State transitions MUST follow CONTRACTS.md if defined.
 
@@ -183,8 +183,8 @@ Define uncommon but valid scenarios.
 
 Examples:
 
-- <EDGE_CASE_1>
-- <EDGE_CASE_2>
+- branch naming conflicts with existing refs (e.g., cannot create main/child when main exists)
+- cross-document rule conflicts (e.g., integration order mismatches across governance files)
 
 System MUST handle edge cases safely.
 
@@ -196,23 +196,23 @@ Define system qualities.
 
 Performance requirements:
 
-- <PERFORMANCE_REQUIREMENT>
+- documentation updates should remain concise enough for human review in a single pass
 
 Reliability requirements:
 
-- <RELIABILITY_REQUIREMENT>
+- orchestration flow must stay executable even when one scope is blocked, through explicit escalation paths
 
 Security requirements:
 
-- <SECURITY_REQUIREMENT>
+- no document may require exposing secrets, keys, or sensitive internal infrastructure details
 
 Usability requirements:
 
-- <USABILITY_REQUIREMENT>
+- onboarding prompts must be understandable by both human maintainers and AI agents without external context
 
 Compatibility requirements:
 
-- <COMPATIBILITY_REQUIREMENT>
+- process definitions should remain portable across terminal-first coding assistants
 
 ---
 
@@ -224,15 +224,15 @@ Examples:
 
 Technical constraints:
 
-- <TECHNICAL_CONSTRAINT>
+- repository is markdown-first and should avoid coupling to a single programming language stack
 
 Business constraints:
 
-- <BUSINESS_CONSTRAINT>
+- must support predictable collaboration among multiple contributors with minimal coordination overhead
 
 Operational constraints:
 
-- <OPERATIONAL_CONSTRAINT>
+- shared-file modifications require manager-controlled approval flow
 
 ---
 
@@ -254,8 +254,8 @@ Define explicitly excluded behavior.
 
 Examples:
 
-- <OUT_OF_SCOPE_1>
-- <OUT_OF_SCOPE_2>
+- implementing product-specific application features
+- introducing runtime infrastructure provisioning beyond documentation scope
 
 Workers MUST NOT implement out-of-scope behavior.
 

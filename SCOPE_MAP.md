@@ -65,8 +65,8 @@ Responsibilities:
 
 Owned paths:
 
-- <UI_PATH_PLACEHOLDER_1>
-- <UI_PATH_PLACEHOLDER_2>
+- templates/ui/
+- examples/ui/
 
 Examples (do not assume unless confirmed):
 
@@ -92,8 +92,8 @@ Responsibilities:
 
 Owned paths:
 
-- <API_PATH_PLACEHOLDER_1>
-- <API_PATH_PLACEHOLDER_2>
+- templates/api/
+- examples/api/
 
 Examples:
 
@@ -118,8 +118,8 @@ Responsibilities:
 
 Owned paths:
 
-- <DATA_PATH_PLACEHOLDER_1>
-- <DATA_PATH_PLACEHOLDER_2>
+- templates/data/
+- examples/data/
 
 Examples:
 
@@ -144,8 +144,8 @@ Responsibilities:
 
 Owned paths:
 
-- <INFRA_PATH_PLACEHOLDER_1>
-- <INFRA_PATH_PLACEHOLDER_2>
+- templates/infra/
+- examples/infra/
 
 Examples:
 
@@ -185,8 +185,8 @@ Responsibilities:
 
 Owned paths:
 
-- <QA_PATH_PLACEHOLDER_1>
-- <QA_PATH_PLACEHOLDER_2>
+- tests/
+- templates/qa/
 
 Examples:
 

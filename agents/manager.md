@@ -54,11 +54,12 @@ Manager execution steps:
 
 Manager integrates in order:
 
-1. Data layer
-2. Application layer
-3. UI layer
-4. Docs
-5. QA
+1. SSOT files
+2. Data layer
+3. Application layer
+4. UI layer
+5. Docs
+6. QA
 
 Technical-risky merges wait for Tech Lead signoff where required.
 

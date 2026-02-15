@@ -1,7 +1,7 @@
 # MD-Skeleton
 [Stack-Adaptive] Customizable AI Markdown templates for developers.
 
-Codex-optimized repository template for safe parallel development using a Single Source of Truth (SSOT) architecture.
+Claude Code-optimized repository template for safe parallel development using a Single Source of Truth (SSOT) architecture.
 
 This structure ensures predictable integration, contract safety, and architectural consistency across human and agent contributors.
 

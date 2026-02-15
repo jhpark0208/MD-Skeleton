@@ -32,26 +32,26 @@ Replace placeholders once system structure and tech stack are decided.
 # 1) System Overview
 
 System type:
-- <web application / mobile application / service / library / hybrid>
+- documentation-first orchestration template repository for AI-assisted development
 
 Primary responsibilities:
-- <RESPONSIBILITY_1>
-- <RESPONSIBILITY_2>
-- <RESPONSIBILITY_3>
+- provide SSOT templates for architecture, contracts, and specifications
+- define Manager- Tech Lead- Worker governance and escalation flow
+- enable predictable parallel execution and integration handoffs
 
 Primary users:
-- <USER_TYPE_1>
-- <USER_TYPE_2>
+- engineering managers and tech leads establishing project governance
+- developers and AI coding agents executing scoped work
 
 System boundaries:
 
 The system includes:
-- <COMPONENT_GROUP_1>
-- <COMPONENT_GROUP_2>
+- SSOT governance documents and operational rules
+- role guides and reusable prompt templates for orchestration
 
 The system does NOT include:
-- <EXTERNAL_SYSTEM_1>
-- <EXTERNAL_SYSTEM_2>
+- production application runtime business logic
+- external deployment infrastructure and hosting operations
 
 ---
 
@@ -210,9 +210,9 @@ Infrastructure Layer MUST NOT depend on:
 
 Interaction style:
 
-- <request/response>
-- <event-driven>
-- <command/query>
+- request/response interactions between user and orchestration manager
+- handoff-driven transitions for worker output and integration review
+- command/query separation for planning versus implementation actions
 
 Example conceptual flow:
 
@@ -271,16 +271,16 @@ Replace or extend as needed.
 Define system-wide constraints.
 
 Performance constraints:
-- <CONSTRAINT_PLACEHOLDER>
+- documentation changes should remain reviewable and scoped (target under 500 changed lines per task when possible)
 
 Security constraints:
-- <CONSTRAINT_PLACEHOLDER>
+- repository artifacts must not contain secrets, credentials, or sensitive production data
 
 Reliability constraints:
-- <CONSTRAINT_PLACEHOLDER>
+- SSOT files must remain internally consistent before implementation proceeds
 
 Compatibility constraints:
-- <CONSTRAINT_PLACEHOLDER>
+- workflow instructions must remain compatible with terminal-based coding agents and human collaborators
 
 ---
 
@@ -288,9 +288,9 @@ Compatibility constraints:
 
 Expected scale:
 
-- users: <ESTIMATE>
-- requests: <ESTIMATE>
-- data size: <ESTIMATE>
+- users: 5-30 active contributors per project
+- requests: 20-200 task handoffs per week
+- data size: under 50 MB markdown-centric repository
 
 ---
 

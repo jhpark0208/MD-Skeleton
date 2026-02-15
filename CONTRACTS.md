@@ -53,25 +53,25 @@ Purpose:
 
 Input contract:
 
-- <INPUT_FIELD_1>
-  - type: <TYPE>
-  - required: <true/false>
-  - description: <description>
+- task_request
+  - type: string
+  - required: true
+  - description: user-provided instruction that defines the desired outcome
 
-- <INPUT_FIELD_2>
-  - type: <TYPE>
-  - required: <true/false>
-  - description: <description>
+- context_references
+  - type: array[string]
+  - required: false
+  - description: optional file paths or document identifiers that constrain execution
 
 Output contract:
 
-- <OUTPUT_FIELD_1>
-  - type: <TYPE>
-  - description: <description>
+- execution_plan
+  - type: object
+  - description: ordered actions with ownership, risk, and escalation notes
 
-- <OUTPUT_FIELD_2>
-  - type: <TYPE>
-  - description: <description>
+- handoff_or_result
+  - type: object
+  - description: structured completion summary, including changed files and compliance status
 
 Error contract:
 - MUST follow Error Structure (see section 4)
@@ -86,13 +86,13 @@ Purpose:
 
 Input contract:
 
-- <DATA_INPUT_FIELD_1>
-- <DATA_INPUT_FIELD_2>
+- document_path
+- proposed_content_or_patch
 
 Output contract:
 
-- <DATA_OUTPUT_FIELD_1>
-- <DATA_OUTPUT_FIELD_2>
+- write_status
+- revision_reference
 
 Constraints:
 
@@ -109,47 +109,48 @@ Use logical definitions, not language-specific syntax.
 
 ---
 
-## Entity: <ENTITY_NAME>
+## Entity: WorkItem
 
 Description:
-- <what it represents>
+- a single scoped unit of work executed through the orchestration flow
 
 Fields:
 
-- <FIELD_NAME>
-  - type: <TYPE>
-  - required: <true/false>
-  - nullable: <true/false>
-  - description: <description>
+- id
+  - type: string
+  - required: true
+  - nullable: false
+  - description: unique identifier for the work item
 
-- <FIELD_NAME>
-  - type: <TYPE>
-  - required: <true/false>
-  - nullable: <true/false>
-  - description: <description>
+- status
+  - type: enum(pending,in_progress,blocked,done)
+  - required: true
+  - nullable: false
+  - description: lifecycle state of the work item
 
 Invariants (MUST always hold):
 
-- <INVARIANT_RULE_1>
-- <INVARIANT_RULE_2>
+- id is unique within a project context
+- status transitions follow the WorkItemLifecycle state machine
 
 Ownership:
 
-- owned by scope: <data/api/ui/etc>
+- owned by scope: api
 
 Lifecycle:
 
 Created by:
-- <COMPONENT>
+- Application Layer
 
 Read by:
-- <COMPONENT>
+- Application Layer
+- QA Layer
 
 Updated by:
-- <COMPONENT>
+- Application Layer
 
 Deleted by:
-- <COMPONENT>
+- Application Layer
 
 ---
 
@@ -159,26 +160,26 @@ Define allowed state transitions.
 
 ---
 
-## State Machine: <STATE_MACHINE_NAME>
+## State Machine: WorkItemLifecycle
 
 States:
 
-- <STATE_1>
-- <STATE_2>
-- <STATE_3>
+- pending
+- in_progress
+- done
 
 Allowed transitions:
 
-- <STATE_1> → <STATE_2>
-- <STATE_2> → <STATE_3>
+- pending → in_progress
+- in_progress → done
 
 Forbidden transitions:
 
-- <STATE_3> → <STATE_1>
+- done → in_progress
 
 State ownership:
 
-- owned by scope: <scope>
+- owned by scope: api
 
 ---
 
@@ -292,7 +293,7 @@ Contract changes MUST follow:
 Version placeholder:
 
 Contract version:
-- <VERSION>
+- v1.0.0
 
 Last updated:
-- <DAT
+- 2026-02-15

@@ -32,10 +32,10 @@ Each decision MUST follow this format.
 
 ---
 
-## Decision ID: DECISION-<NUMBER>
+## Decision ID: DECISION-NNN
 
 Date:
-- <YYYY-MM-DD>
+- YYYY-MM-DD
 
 Status:
 - proposed
@@ -45,64 +45,64 @@ Status:
 - superseded
 
 Decision summary:
-- <SHORT_SUMMARY>
+- one-sentence summary of the selected technical direction
 
 Context:
-- <PROBLEM_DESCRIPTION>
-- <CONSTRAINTS>
-- <RELEVANT_REQUIREMENTS>
+- problem being solved
+- explicit constraints
+- relevant requirements and scope boundaries
 
 Options considered:
 
 Option 1:
-- description: <OPTION_DESCRIPTION>
+- description: option summary
 - pros:
-  - <PRO>
-  - <PRO>
+  - advantage 1
+  - advantage 2
 - cons:
-  - <CON>
-  - <CON>
+  - trade-off 1
+  - trade-off 2
 
 Option 2:
-- description: <OPTION_DESCRIPTION>
+- description: alternative summary
 - pros:
-  - <PRO>
+  - advantage
 - cons:
-  - <CON>
+  - trade-off
 
 Decision:
 
-- <SELECTED_OPTION>
-- explanation: <WHY_THIS_OPTION>
+- selected option name
+- explanation: rationale and risk trade-off behind the decision
 
 Consequences:
 
 Positive:
-- <POSITIVE_EFFECT>
+- expected positive impact
 
 Negative:
-- <NEGATIVE_EFFECT>
+- known downside or cost
 
 Neutral:
-- <NEUTRAL_EFFECT>
+- behavior or area intentionally unchanged
 
 Affected components:
 
-- <COMPONENT_1>
-- <COMPONENT_2>
+- component or file group 1
+- component or file group 2
 
 Related documents:
 
 - ARCHITECTURE.md
 - CONTRACTS.md
 - SPEC.md
-- <OTHER_DOCUMENT>
+- additional related document if applicable
 
 Supersedes:
-- <DECISION_ID> (if applicable)
+- none or DECISION-XXX
 
 Superseded by:
-- <DECISION_ID> (if applicable)
+- none or DECISION-YYY
 
 ---
 

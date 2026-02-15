@@ -1,8 +1,8 @@
-# Codex Orchestration Entry Point
+# Claude Code Orchestration Entry Point
 
 This file defines the orchestration model, agent roles, and execution rules.
 
-Codex MUST read this file first before performing any task.
+Claude Code MUST read this file first before performing any task.
 
 ---
 
@@ -32,7 +32,7 @@ Unclear SSOT / scope / architecture / security risk
   -> proceed only after gate/approval update
 ```
 
-Then Codex MUST read, in order:
+Then Claude Code MUST read, in order:
 
 1. ARCHITECTURE.md
 2. CONTRACTS.md
@@ -220,7 +220,7 @@ Tech Lead signs off technical-quality-sensitive integrations.
 
 # 8) Compliance Checklist
 
-Before implementing, Codex MUST verify:
+Before implementing, Claude Code MUST verify:
 
 - SSOT alignment
 - scope ownership

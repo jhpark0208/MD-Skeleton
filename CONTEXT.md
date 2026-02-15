@@ -11,13 +11,13 @@ Workers MUST read this file to understand the *journey* of the project.
 
 # 1) Current Focus
 
-**Status:** <Planning / Implementation / Debugging / Refactoring>
+**Status:** Planning
 
 **Active Task:**
-- <DESCRIPTION_OF_CURRENT_TASK>
+- create Claude Code branch baseline and convert core governance documents from template placeholders to concrete defaults
 
 **Immediate Goal:**
-- <WHAT_WE_ARE_TRYING_TO_ACHIEVE_RIGHT_NOW>
+- make SSOT and orchestration docs immediately executable for a real project kickoff
 
 ---
 
@@ -25,11 +25,11 @@ Workers MUST read this file to understand the *journey* of the project.
 
 Record significant context shifts here. (Newest on top)
 
-## [YYYY-MM-DD] <Brief Title>
-- **Context:** <What happened?>
-- **Action:** <What did we do?>
-- **Result:** <What was the outcome?>
-- **Next Step:** <What should happen next?>
+## [2026-02-15] Claude Code Baseline Initialization
+- **Context:** Repository started with template placeholders and Codex-specific naming in key docs.
+- **Action:** Created a new branch for Claude Code alignment and updated SSOT baseline values.
+- **Result:** Core orchestration documents now contain concrete defaults and clearer governance expectations.
+- **Next Step:** Add project-specific architecture/contracts/spec details before implementation work begins.
 
 *(Example)*
 ## [2024-01-01] Database Selection Change
@@ -44,10 +44,11 @@ Record significant context shifts here. (Newest on top)
 
 Rules derived from past failures.
 
-1.  **<TOPIC>**: <LESSON_DESCRIPTION>
-    - *Example: Do not use `eval()` for parsing JSON. Use `JSON.parse()`.*
+1.  **Template Drift**: Unfilled placeholders cause inconsistent execution and interpretation across contributors.
+    - *Always replace template tokens before starting real implementation tasks.*
 
-2.  **<TOPIC>**: <LESSON_DESCRIPTION>
+2.  **Governance Ambiguity**: Missing gate criteria leads to risky implementation shortcuts.
+    - *Require explicit Tech Lead gate status for architecture/security-sensitive changes.*
 
 ---
 
@@ -55,5 +56,5 @@ Rules derived from past failures.
 
 Things that are unresolved but strictly tracked.
 
-- [ ] Question 1: <QUESTION>
-- [ ] Issue 1: <ISSUE_DESCRIPTION>
+- [ ] Question 1: Should scope-owned paths be switched from template directories to actual repository directories after first feature scaffolding?
+- [ ] Issue 1: Integration order wording differs between some governance docs and should be normalized in a follow-up decision.
