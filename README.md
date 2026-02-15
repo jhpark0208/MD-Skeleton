@@ -93,6 +93,47 @@ For design-sensitive or cross-cutting changes, follow this pattern:
 4. Tech Lead signs off on technical quality.
 5. Manager performs final integration.
 
+# Collaboration in One Diagram
+
+Use this template to understand the whole flow at a glance:
+
+```text
+Task Request
+      |
+      v
+[Manager defines scope + ownership in SCOPE_MAP.md]
+      |
+      v
+Need quality/security/design review?
+      |
+ +----yes-----------------------------+----no------------------+
+ |                                       |
+ v                                       v
+[Manager requests Tech Lead input]   [Proceed to implementation]
+      |
+      v
+[Tech Lead gate: architecture / quality / security review]
+      |
+      v
+[Worker executes within owned scope]
+      |
+      v
+[Worker submits handoff to Manager]
+      |
+      v
+[Manager + Tech Lead alignment]
+      |
+      v
+[Finalize integration + record in DECISIONS.md if needed]
+```
+
+Decision point notes:
+
+- "yes" path applies for cross-cutting, architecture-sensitive, security-sensitive,
+  or high-risk implementation changes.
+- "no" path applies for straightforward, scope-local, low-risk changes.
+- If any conflict appears, pause and return via escalation path before proceeding.
+
 ---
 
 # Parallel Safety
