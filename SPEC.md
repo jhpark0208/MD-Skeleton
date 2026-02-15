@@ -68,35 +68,30 @@ Add more actors if needed.
 
 ---
 
-# 3) Use Cases
+# 3) User Stories (Agile)
 
-Describe system behavior from user perspective.
+Describe requirements from the user's perspective to ensure value delivery.
 
----
+Format: "As a <ROLE>, I want <FEATURE>, so that <BENEFIT>."
 
-## Use Case: <USE_CASE_NAME>
+## Story: <STORY_NAME>
 
-Actor:
-- <ACTOR>
+**User Story:**
+> As a **<ROLE>**
+> I want to **<ACTION / FEATURE>**
+> So that **<VALUE / BENEFIT>**
 
-Preconditions:
-- <PRECONDITION_1>
-- <PRECONDITION_2>
+**Acceptance Criteria (Gherkin syntax preferred):**
 
-Steps:
+Scenario 1: <SCENARIO_NAME>
+- Given <PRECONDITION>
+- When <ACTION>
+- Then <EXPECTED_RESULT>
 
-1. <STEP_1>
-2. <STEP_2>
-3. <STEP_3>
-
-Expected result:
-
-- <EXPECTED_RESULT>
-
-Failure cases:
-
-- <FAILURE_CASE_1>
-- <FAILURE_CASE_2>
+Scenario 2: <SCENARIO_NAME>
+- Given <PRECONDITION>
+- When <ACTION>
+- Then <EXPECTED_RESULT>
 
 ---
 

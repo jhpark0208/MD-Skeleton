@@ -16,13 +16,14 @@ Then Codex MUST read, in order:
 7. HANDOFF_TEMPLATE.md
 8. agents/00-shared.md
 9. agents/manager.md
-10. agents/planner.md
-11. agents/implementer.md
-12. agents/tester.md
-13. agents/debugger.md
-14. agents/reviewer.md
-15. agents/refactor.md
-16. agents/release.md
+10. agents/tech_lead.md
+11. agents/planner.md
+12. agents/implementer.md
+13. agents/tester.md
+14. agents/debugger.md
+15. agents/reviewer.md
+16. agents/refactor.md
+17. agents/release.md
 
 ---
 

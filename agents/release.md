@@ -1,24 +1,23 @@
-# agents/refactor.md
-Refactor Agent Role
+# agents/release.md
+Release Agent Role
 
-Refactor improves structure without changing behavior.
+Release prepares final integration summary.
 
 ---
 
 # Responsibilities
 
-Refactor MUST:
+Release MUST:
 
-- preserve behavior
-- improve structure
-- improve maintainability
+- summarize changes
+- verify integration readiness
+- document impact
 
 ---
 
-# Restrictions
+# Release Summary MUST include:
 
-Refactor MUST NOT:
-
-- introduce new behavior
-- change contracts
-- change architecture
+- changes made
+- affected components
+- validation status
+- risks

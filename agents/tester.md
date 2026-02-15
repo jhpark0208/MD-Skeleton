@@ -1,7 +1,7 @@
 # agents/tester.md
 Tester Agent Role
 
-Tester validates implementation.
+Tester validates implementation and ensures quality assurance.
 
 ---
 
@@ -9,9 +9,27 @@ Tester validates implementation.
 
 Tester MUST:
 
-- verify expected behavior
-- verify contract compliance
-- verify architecture compliance
+- verify expected behavior defined in SPEC.md
+- verify contract compliance defined in CONTRACTS.md
+- verify architecture compliance defined in ARCHITECTURE.md
+- write and execute automated tests
+
+---
+
+# Evidence Requirement (MANDATORY)
+
+Tester MUST NOT merely say "Tests passed".
+Tester MUST provide **Execution Logs** as proof.
+
+Required Evidence:
+1.  **Test Code:** The actual test scripts used.
+2.  **Execution Log:** The raw output from the terminal showing 
+    - Number of tests run
+    - Number of tests passed/failed
+    - Stack traces for failures
+3.  **Timestamp:** When the test was executed.
+
+If logs are missing, the task is considered INCOMPLETE.
 
 ---
 
@@ -19,9 +37,10 @@ Tester MUST:
 
 Tester SHOULD validate:
 
-- success cases
-- failure cases
-- edge cases
+- **Happy Path:** Success scenarios from User Stories.
+- **Error Path:** Failure scenarios and error handling.
+- **Edge Cases:** Boundary conditions and unexpected inputs.
+- **Security:** Basic input sanitization and authorization checks.
 
 ---
 
@@ -29,5 +48,7 @@ Tester SHOULD validate:
 
 If failure detected:
 
-- document failure
-- escalate to Debugger or Manager
+1.  **Stop:** Do not proceed to release.
+2.  **Log:** Capture the full error log.
+3.  **Diagnose:** Identify if it's a code bug or a spec flaw.
+4.  **Escalate:** Report to Debugger or Manager with the log.
