@@ -8,7 +8,7 @@ All Workers and Manager MUST follow this architecture.
 
 If implementation requires architectural changes:
 - STOP
-- request Manager update to this document first
+- request Manager and Tech Lead update to this document first
 
 Do NOT silently introduce architectural divergence.
 
@@ -312,7 +312,7 @@ Extensions MUST NOT:
 
 # 10) Authority and Change Control
 
-Manager owns architectural decisions.
+Manager owns architectural decisions with Tech Lead technical adjudication.
 
 Workers MUST NOT modify architecture without approval.
 

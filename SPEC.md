@@ -9,7 +9,7 @@ All Workers MUST follow this specification.
 If implementation reveals ambiguity or missing requirements:
 
 - STOP
-- request Manager clarification and update this document first
+- request Manager clarification (and Tech Lead clarification for architecture/quality/security implications), then update this document first
 
 Do NOT implement speculative behavior.
 
@@ -276,9 +276,9 @@ Validation MUST follow CONTRACTS.md and ARCHITECTURE.md.
 
 # 13) Authority and Change Control
 
-Manager owns this document.
+Manager owns this document with Tech Lead review for technical quality and architecture-sensitive updates.
 
-Workers MUST NOT modify specification without approval.
+Workers MUST NOT modify this document without approval.
 
 Specification changes MUST be documented before implementation changes.
 

@@ -16,7 +16,7 @@ All Workers MUST follow this document.
 If implementation requires contract changes:
 
 - STOP
-- request Manager update to this document first
+- request Manager and Tech Lead update to this document first
 
 Do NOT silently introduce contract divergence.
 
@@ -278,6 +278,7 @@ Data scope:
 Manager scope:
 - cross-scope contracts
 - shared contracts
+- Tech Lead review applies when contracts change across multiple scopes or introduce security-sensitive boundaries
 
 ---
 
