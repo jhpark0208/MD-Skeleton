@@ -110,11 +110,15 @@ Superseded by:
 
 List all decisions here for quick reference.
 
-Example:
+Current decisions:
 
-- DECISION-001: Initial system architecture
-- DECISION-002: Error handling strategy
-- DECISION-003: Data ownership model
+- DECISION-001: Introduce Tech Lead as technical governance authority above Workers and parallel to execution flow.
+
+- Legacy examples (template placeholders):
+
+  - DECISION-002: Initial system architecture
+  - DECISION-003: Error handling strategy
+  - DECISION-004: Data ownership model
 
 Add entries as decisions are made.
 
@@ -123,6 +127,95 @@ Add entries as decisions are made.
 # 3) Architectural Decisions
 
 Record major structural decisions here.
+
+## DECISION-001: Introduce Manager–Tech Lead–Worker governance model
+
+Date:
+
+- 2026-02-15
+
+Status:
+
+- accepted
+
+Decision summary:
+
+- Introduce `agents/tech_lead.md` and enforce a three-layer decision flow:
+  - SSOT -> Tech Lead (for architecture/quality/security) -> Manager (for scope/integration)
+
+Context:
+
+- Problem: Existing pipeline only had Manager-worker model, which lacked a dedicated technical governance layer for architecture consistency and security.
+- Constraints: Existing SSOT stack should remain authoritative.
+- Requirements: Clarify responsibilities and maintain backward compatibility.
+
+Options considered:
+
+Option 1:
+
+- Keep Manager only and add stricter SSOT checks in instructions.
+- pros:
+  - fewer roles
+- cons:
+  - limited review depth for design-sensitive changes
+  - weaker technical governance in scaling teams
+
+Option 2:
+
+- Add Tech Lead role with escalation flow and explicit gate checkpoints.
+- pros:
+  - clearer architecture/security ownership
+  - improves long-term consistency
+- cons:
+  - adds one additional routing step
+
+Decision:
+
+- Option 2: Add Tech Lead role and routing checks.
+- explanation: Better controls for quality, consistency, and secure design decisions with minimal process overhead.
+
+Consequences:
+
+Positive:
+
+- clearer accountability for cross-cutting technical risk
+- cleaner decision record and escalation path
+
+Negative:
+
+- slight increase in process overhead for high-signal changes
+
+Neutral:
+
+- template-based handoff now includes Tech Lead gate fields
+
+Affected components:
+
+- AGENTS.md
+- PARALLEL.md
+- README.md
+- HANDOFF_TEMPLATE.md
+- agents/tech_lead.md
+- DECISIONS.md
+
+Related documents:
+
+- ARCHITECTURE.md
+- SPEC.md
+- SCOPE_MAP.md
+- PARALLEL.md
+- AGENTS.md
+- HANDOFF_TEMPLATE.md
+
+Supersedes:
+
+- None
+
+Superseded by:
+
+- None
+
+---
 
 Examples:
 

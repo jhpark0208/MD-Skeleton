@@ -211,6 +211,11 @@ Shared files:
 - AGENTS.md
 - PARALLEL.md
 - HANDOFF_TEMPLATE.md
+- README.md
+- CONTEXT.md
+- agents/tech_lead.md
+- agents/manager.md
+- agents/
 
 Also shared:
 
